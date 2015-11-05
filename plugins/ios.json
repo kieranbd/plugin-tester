@@ -1,0 +1,64 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"BeaconPlugin\"><param name=\"ios-package\" value=\"BeaconScanner\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreBluetooth.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "dict": [],
+                    "/*": [],
+                    "/Information Property List": [],
+                    "Information Property List": [],
+                    "NSLocationAlwaysUsageDescription": [
+                        {
+                            "xml": "<string>Please allow this app to always use background bluetooth scanning</string>",
+                            "count": 1
+                        }
+                    ],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><array><key>NSAllowsArbitraryLoads</key><string>YES</string></array></dict>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ],
+                    "NSLocationWhenInUseUsageDescription": [],
+                    "UIBackgroundModes": []
+                }
+            }
+        }
+    },
+    "installed_plugins": {},
+    "dependent_plugins": {}
+}
